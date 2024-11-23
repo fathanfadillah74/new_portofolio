@@ -1,3 +1,4 @@
+import './app.css';
 import About from './components/about';
 import Navbar from './components/navbar';
 import Skills from './components/skills';
