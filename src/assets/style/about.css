@@ -9,19 +9,22 @@
     opacity: 1;
   }
 }
-.about-container {
+.big-container {
+  margin: 2rem 0;
+}
+.big-container .about-container {
   color: white;
   margin: 2rem 1rem 1rem 1rem;
 }
-.about-container .about-text {
+.big-container .about-container .about-text {
   position: relative;
 }
-.about-container .about-text p {
+.big-container .about-container .about-text p {
   font-size: 15px;
   text-align: justify;
   line-height: 2;
 }
-.about-container .about-text .blinking-cursor {
+.big-container .about-container .about-text .blinking-cursor {
   display: inline-block;
   width: 2px;
   height: 1em;
@@ -29,18 +32,18 @@
   margin-left: 2px;
   animation: blinkCursor 1s infinite;
 }
-
-.photo-container {
+.big-container .photo-container {
   text-align: center;
   margin: 2rem 2rem 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 250px;
 }
-.photo-container .swiper {
+.big-container .photo-container .swiper {
   width: 300px;
 }
-.photo-container img {
+.big-container .photo-container img {
   width: 150px;
   height: 200px;
   background: white;
@@ -52,7 +55,8 @@
   .big-container {
     display: flex;
     padding-bottom: 1rem;
-    height: 280px;
+    align-items: flex-start;
+    gap: 4rem;
   }
   .big-container .about-container .about-text p {
     font-size: 21px;
@@ -64,7 +68,7 @@
     padding: 1rem;
   }
   .big-container .photo-container .swiper .swiper-wrapper {
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
   }
   .big-container .photo-container img {
     width: 200px;

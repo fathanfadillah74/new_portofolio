@@ -36,8 +36,6 @@ const About = () => {
         <div className="photo-container">
           <Swiper
             spaceBetween={50}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             modules={[EffectCards]}
             effect={"cards"}
             grabCursor={true}

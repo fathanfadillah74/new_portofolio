@@ -12,59 +12,65 @@
   }
 }
 
-.about-container {
-  color: white;
-  margin: 2rem 1rem 1rem 1rem;
+.big-container {
+  margin: 2rem 0;
 
-  .about-text {
-    position: relative;
+  .about-container {
+    color: white;
+    margin: 2rem 1rem 1rem 1rem;
 
-    p {
-      font-size: 15px;
-      text-align: justify;
-      line-height: 2;
+    .about-text {
+      position: relative;
+
+      p {
+        font-size: 15px;
+        text-align: justify;
+        line-height: 2;
+      }
+
+      .blinking-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1em;
+        background-color: white;
+        margin-left: 2px;
+        animation: blinkCursor 1s infinite;
+      }
+    }
+  }
+
+  .photo-container {
+    text-align: center;
+    margin: 2rem 2rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+
+    .swiper {
+      width: 300px;
     }
 
-    .blinking-cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1em;
-      background-color: white;
-      margin-left: 2px;
-      animation: blinkCursor 1s infinite;
+    img {
+      width: 150px;
+      height: 200px;
+      background: white;
+      padding: 0.5rem 0.2rem;
+      transition: transform 0.3s ease-in-out;
     }
+
+    // img:hover {
+    //     transform: scale(1.1); // Efek zoom saat hover
+    // }
   }
-}
-
-.photo-container {
-  text-align: center;
-  margin: 2rem 2rem 0 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .swiper {
-    width: 300px;
-  }
-
-  img {
-    width: 150px;
-    height: 200px;
-    background: white;
-    padding: 0.5rem 0.2rem;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  // img:hover {
-  //     transform: scale(1.1); // Efek zoom saat hover
-  // }
 }
 
 @media screen and (min-width: 768px) {
   .big-container {
     display: flex;
     padding-bottom: 1rem;
-    height: 280px;
+    align-items: flex-start;
+    gap: 4rem;
 
     .about-container {
       .about-text {
@@ -82,14 +88,13 @@
         padding: 1rem;
 
         .swiper-wrapper {
-            padding: 2rem;
+          padding: 0 2rem 2rem 2rem;
         }
-
-    }
-    img {
-      width: 200px;
-      height: 300px;
-    }
+      }
+      img {
+        width: 200px;
+        height: 300px;
+      }
     }
   }
 }
