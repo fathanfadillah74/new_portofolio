@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+.navbar {
+    background-color: #E2E2B6;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+    margin: 0.5rem;
+    border-radius: 20px;
+    font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+
+    .name {
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: font-style 0.3s ease, font-size 0.3s ease;
+
+        &:hover {
+            font-style: italic;
+            font-size: 16px;
+        }
+    }
+
+
+    .burger {
+        width: 20px;
+    }
+
+    .navLinks {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #E2E2B6;
+        padding: 1rem;
+        border-radius: 20px;
+        z-index: 999;
+        list-style: none;
+        gap: 1rem;
+        width: 310px;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+            }
+
+            &.is-active {
+                padding: 0 0.5rem;
+                background-color: #6ec0fd;
+                border-radius: 20%;
+            }
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input[type="checkbox"] {
+            display: none; // Sembunyikan checkbox
+        }
+
+        .switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc; // Warna background saat OFF
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            // Slider
+            .slider {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 26px;
+                height: 26px;
+                background-color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease;
+
+                // Ikon Day/Night
+                .dayIcon,
+                .nightIcon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    opacity: 0; // Sembunyikan ikon awal
+                    transition: opacity 0.3s ease;
+                }
+
+                .dayIcon {
+                    opacity: 1; // Tampilkan dayIcon secara default
+                }
+            }
+        }
+
+        // Saat checkbox dicentang (ON)
+        input[type="checkbox"]:checked+.switch {
+            background-color: #1e1e1e; // Warna background saat ON
+
+            .slider {
+                transform: translateX(30px); // Geser slider ke kanan
+
+                .dayIcon {
+                    opacity: 0; // Sembunyikan dayIcon
+                }
+
+                .nightIcon {
+                    opacity: 1; // Tampilkan nightIcon
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        .navLinks {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            position: relative;
+            top: 0;
+            right: 0;
+            background-color: #E2E2B6;
+            padding: 0;
+            border-radius: 20px;
+            list-style: none;
+            width: 310px;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 400;
+                }
+
+                &.is-active {
+                    padding: 0 0.5rem;
+                    background-color: #6ec0fd;
+                    border-radius: 20%;
+                }
+
+                &:hover {
+                    color: #333333;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: #6ec0fd;
+                    transition: width .3s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            .switch {
+                position: relative;
+                width: 80px;
+                height: 40px;
+                background-color: #ccc;
+                border-radius: 40px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                .slider {
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    width: 36px;
+                    height: 36px;
+                    background-color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: transform 0.3s ease;
+
+                    .dayIcon,
+                    .nightIcon {
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+
+                    .dayIcon {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            input[type="checkbox"]:checked+.switch {
+                background-color: #1e1e1e;
+
+                .slider {
+                    transform: translateX(40px);
+
+                    .dayIcon {
+                        opacity: 0;
+                    }
+
+                    .nightIcon {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+}
