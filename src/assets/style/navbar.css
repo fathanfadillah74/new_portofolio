@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 10px 30px;
   align-items: center;
-  margin: 0.5rem;
+  margin: 0.5rem 0.5rem 2rem 0.5rem;
   border-radius: 20px;
   font-family: "Edu AU VIC WA NT Pre", sans-serif;
 }
@@ -108,9 +108,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .navbar .name {
+    font-size: 20px;
+  }
   .navbar .navLinks {
     display: flex;
-    gap: 30px;
+    gap: 70px;
     list-style: none;
     position: relative;
     top: 0;
@@ -118,8 +121,7 @@
     background-color: #E2E2B6;
     padding: 0;
     border-radius: 20px;
-    list-style: none;
-    width: 310px;
+    width: auto;
     align-items: center;
     justify-content: center;
   }
@@ -130,6 +132,7 @@
     text-decoration: none;
     color: black;
     font-weight: 400;
+    font-size: 20px;
   }
   .navbar .navLinks li.is-active {
     padding: 0 0.5rem;

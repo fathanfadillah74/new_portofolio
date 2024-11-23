@@ -1,3 +1,6 @@
 body {
   background-color: #021526;
+}
+body #root {
+  padding: 1rem;
 }/*# sourceMappingURL=app.css.map */
