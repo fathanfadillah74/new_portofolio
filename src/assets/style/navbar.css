@@ -55,7 +55,7 @@
   width: 340px;
 }
 .navbar .theme-toggle {
-  display: flex;
+  display: "none";
   align-items: center;
   justify-content: center;
 }
@@ -63,6 +63,7 @@
   display: none;
 }
 .navbar .theme-toggle .switch {
+  display: none;
   position: relative;
   width: 60px;
   height: 30px;
