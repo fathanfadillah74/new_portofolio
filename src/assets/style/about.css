@@ -9,8 +9,21 @@
     opacity: 1;
   }
 }
+.section-text-about {
+  text-align: center;
+  color: wheat;
+  border-bottom: 2px solid;
+  font-family: "Edu AU VIC WA NT Pre", sans-serif;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.section-text-about h1 {
+  margin: 0;
+}
+
 .big-container {
   margin: 2rem 0;
+  padding: 0 1rem;
 }
 .big-container .about-container {
   color: white;
@@ -34,11 +47,11 @@
 }
 .big-container .photo-container {
   text-align: center;
-  margin: 2rem 2rem 0 2rem;
+  margin: 2rem 2rem 0 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 140px;
 }
 .big-container .photo-container .swiper {
   width: 300px;
@@ -61,6 +74,7 @@
   .big-container .about-container .about-text p {
     font-size: 21px;
     text-align: justify;
+    margin-left: 4rem;
   }
   .big-container .photo-container .swiper {
     width: 400px;

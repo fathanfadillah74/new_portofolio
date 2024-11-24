@@ -25,8 +25,8 @@
 .navbar .navLinks {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 45px;
+  right: 0;
   background-color: #E2E2B6;
   padding: 1rem;
   border-radius: 20px;

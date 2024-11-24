@@ -1,7 +1,22 @@
+.section-text {
+  text-align: center;
+  color: wheat;
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  font-family: "Edu AU VIC WA NT Pre", sans-serif;
+  padding: 1rem;
+
+  h1{
+    margin: 0;
+  }
+}
+
 .container-skills {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 0 1rem;
+  margin: 1.5rem 0;
 
   .list-skill {
     color: white;
@@ -116,7 +131,8 @@
     justify-content: center;
 
     .list-skill {
-      flex-basis: calc(22% - 1rem);
+      width: auto;
+      flex-basis: 380px;
       box-sizing: border-box;
     }
   }

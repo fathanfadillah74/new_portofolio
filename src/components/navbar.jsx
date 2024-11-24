@@ -26,6 +26,7 @@ function Navbar() {
 
   const toggleNav = () => {
     setNavVisible(!isNavVisible);
+    document.getElementsByClassName("section-text-about")[0].style.marginTop = isNavVisible ? "0" : "5rem";
   };
 
   return (

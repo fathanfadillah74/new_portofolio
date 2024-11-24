@@ -1,0 +1,45 @@
+.section-text-experience {
+  text-align: center;
+  color: wheat;
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  font-family: "Edu AU VIC WA NT Pre", sans-serif;
+}
+.section-text-experience h1 {
+  margin: 0;
+}
+
+.container-experience .head-description {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container-experience .head-description img {
+  width: 70px;
+}
+.container-experience .head-description .vertical-timeline-element-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .container-experience .head-description {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container-experience .head-description img {
+    width: 70px;
+  }
+  .container-experience .head-description .vertical-timeline-element-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .container-experience .vertical-timeline::before {
+    background: #E2E2B6 !important;
+  }
+  .container-experience .date-experience {
+    color: white;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=experience.css.map */
