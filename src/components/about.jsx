@@ -10,11 +10,23 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth);
+
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isDesktop]);
+
   return (
     <>
-    <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2 }}
@@ -25,31 +37,71 @@ const About = () => {
       </motion.div>
       <div className="big-container">
         <div className="photo-container">
-          <Swiper
-            spaceBetween={50}
-            modules={[EffectCards]}
-            effect={"cards"}
-            grabCursor={true}
-          >
-            <SwiperSlide>
-              <img src={fotoProfile} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={fotoProfile2} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={fotoProfile3} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={fotoProfile4} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={fotoProfile5} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={fotoProfile6} alt="" />
-            </SwiperSlide>
-          </Swiper>
+          {isDesktop >= 768 && (
+            <Swiper
+              modules={[EffectCards]}
+              effect={"cards"}
+              grabCursor={true}
+              autoplay={{
+                delay: 2500,
+              }}
+              slidesPerView={2}
+              spaceBetween={100}
+              navigation={true}
+            >
+              <SwiperSlide>
+                <img src={fotoProfile} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile4} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile5} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile6} alt="" />
+              </SwiperSlide>
+            </Swiper>
+          )}
+          {isDesktop < 768 && (
+            <Swiper
+              modules={[EffectCards]}
+              effect={"crative"}
+              grabCursor={true}
+              autoplay={{
+                delay: 2500,
+              }}
+              slidesPerView={2}
+              spaceBetween={100}
+              navigation={true}
+            >
+              <SwiperSlide>
+                <img src={fotoProfile} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile4} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile5} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fotoProfile6} alt="" />
+              </SwiperSlide>
+            </Swiper>
+          )}
+
         </div>
         <div className="about-container">
           <div className="about-text">

@@ -54,14 +54,16 @@
 
   .photo-container {
     text-align: center;
-    margin: 2rem 2rem 0 3rem;
+    margin: 2rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
 
     .swiper {
       width: 300px;
+      .swiper-wrapper{
+        align-items: center;
+      }
     }
 
     img {

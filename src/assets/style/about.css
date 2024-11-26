@@ -46,14 +46,16 @@
 }
 .big-container .photo-container {
   text-align: center;
-  margin: 2rem 2rem 0 3rem;
+  margin: 2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px;
 }
 .big-container .photo-container .swiper {
   width: 300px;
+}
+.big-container .photo-container .swiper .swiper-wrapper {
+  align-items: center;
 }
 .big-container .photo-container img {
   width: 150px;
