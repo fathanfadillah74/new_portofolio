@@ -36,13 +36,14 @@
   border-radius: 20px;
   z-index: 999;
   list-style: none;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 310px;
   align-items: center;
   justify-content: center;
 }
 .navbar .navLinks li {
   cursor: pointer;
+  padding: 0 0.5rem;
 }
 .navbar .navLinks li a {
   text-decoration: none;
@@ -116,7 +117,7 @@
 
 @media screen and (min-width: 768px) {
   .navbar {
-    transform: translateX(40%);
+    transform: translateX(60%);
   }
   .navbar .name {
     font-size: 20px;
@@ -145,7 +146,6 @@
     font-size: 20px;
   }
   .navbar .navLinks li.is-active {
-    padding: 0 0.5rem;
     background-color: #6ec0fd;
     border-radius: 20%;
   }
