@@ -2,7 +2,8 @@
 
 .navbar {
     position: fixed;
-    transform: translateX(30%);
+    transform: translateX(-50%);
+    left: 50%;
     gap: 1rem;
     top: 0;
     z-index: 999;
@@ -19,6 +20,9 @@
         font-size: 15px;
         font-weight: 500;
         transition: font-style 0.3s ease, font-size 0.3s ease;
+        white-space: nowrap; /* Mencegah teks dibungkus ke baris baru */
+        overflow: hidden; /* Memastikan teks tidak meluap jika terlalu panjang */
+        text-overflow: ellipsis;
 
         &:hover {
             font-style: italic;
@@ -140,7 +144,6 @@
 
 @media screen and (min-width: 768px) {
     .navbar {
-        transform: translateX(60%);
         .name {
             font-size: 20px;
             &:hover {
