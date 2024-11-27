@@ -18,7 +18,6 @@
     .name {
         font-size: 15px;
         font-weight: 500;
-        cursor: pointer;
         transition: font-style 0.3s ease, font-size 0.3s ease;
 
         &:hover {
@@ -144,6 +143,10 @@
         transform: translateX(60%);
         .name {
             font-size: 20px;
+            &:hover {
+                font-style: italic;
+                font-size: 22px;
+            }
         }
         .navLinks {
             display: flex;
