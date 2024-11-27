@@ -1,0 +1,25 @@
+/* ContactFooter.css */
+.contact-footer {
+  padding: 0.5rem 0;
+  background-color: #e2e2b6;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contact-footer .contact-info {
+  font-family: "Edu AU VIC WA NT Pre", sans-serif;
+}
+.contact-footer .contact-info ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-footer .contact-info ul li a img {
+  width: 50px;
+}/*# sourceMappingURL=contact.css.map */

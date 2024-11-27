@@ -12,99 +12,105 @@
   }
 }
 
-.section-text-about {
-  text-align: center;
-  color: wheat;
-  border-bottom: 2px solid;
-  font-family: "Edu AU VIC WA NT Pre", sans-serif;
-  padding: 1rem;
-  margin-top: 1rem;
-
-  h1{
-    margin: 0;
-  }
-}
-
-.big-container {
-  padding: 0 1rem;
-
-  .about-container {
-    color: white;
-    margin: 2rem auto;
-
-    .about-text {
-      position: relative;
-
-      p {
-        font-size: 15px;
-        text-align: justify;
-        line-height: 2;
-      }
-
-      .blinking-cursor {
-        display: inline-block;
-        width: 2px;
-        height: 1em;
-        background-color: white;
-        margin-left: 2px;
-        animation: blinkCursor 1s infinite;
-      }
-    }
-  }
-
-  .photo-container {
+.about-section {
+  margin-top: 3rem;
+  .section-text-about {
     text-align: center;
-    margin: 2rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: wheat;
+    border-bottom: 2px solid;
+    font-family: "Edu AU VIC WA NT Pre", sans-serif;
+    padding: 1rem;
+    margin-top: 1rem;
 
-    .swiper {
-      width: 300px;
-      .swiper-wrapper{
-        align-items: center;
-      }
+    h1 {
+      margin: 0;
     }
-
-    img {
-      width: 150px;
-      background: white;
-      padding: 0.5rem 0.2rem;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    // img:hover {
-    //     transform: scale(1.1); // Efek zoom saat hover
-    // }
   }
-}
 
-@media screen and (min-width: 768px) {
   .big-container {
-    display: flex;
-    padding-bottom: 1rem;
-    align-items: center;
-    gap: 4rem;
+    padding: 0 1rem;
 
     .about-container {
+      color: white;
+      margin: 2rem auto;
+
       .about-text {
+        position: relative;
+
         p {
-          font-size: 21px;
+          font-size: 15px;
           text-align: justify;
+          line-height: 2;
+        }
+
+        .blinking-cursor {
+          display: inline-block;
+          width: 2px;
+          height: 1em;
+          background-color: white;
+          margin-left: 2px;
+          animation: blinkCursor 1s infinite;
         }
       }
     }
 
     .photo-container {
-      .swiper {
-        padding: 1rem;
+      text-align: center;
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      .swiper {
+        width: 300px;
         .swiper-wrapper {
-          padding: 0 2rem 2rem 2rem;
+          align-items: center;
         }
       }
+
       img {
-        width: 200px;
+        width: 150px;
+        background: white;
+        padding: 0.5rem 0.2rem;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      // img:hover {
+      //     transform: scale(1.1); // Efek zoom saat hover
+      // }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-section {
+    margin-top: 5.5rem;
+    .big-container {
+      display: flex;
+      padding-bottom: 1rem;
+      align-items: center;
+      gap: 4rem;
+
+      .about-container {
+        .about-text {
+          p {
+            font-size: 21px;
+            text-align: justify;
+          }
+        }
+      }
+
+      .photo-container {
+        .swiper {
+          padding: 1rem;
+
+          .swiper-wrapper {
+            padding: 0 2rem 2rem 2rem;
+          }
+        }
+        img {
+          width: 200px;
+        }
       }
     }
   }

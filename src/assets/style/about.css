@@ -9,7 +9,10 @@
     opacity: 1;
   }
 }
-.section-text-about {
+.about-section {
+  margin-top: 3rem;
+}
+.about-section .section-text-about {
   text-align: center;
   color: wheat;
   border-bottom: 2px solid;
@@ -17,26 +20,25 @@
   padding: 1rem;
   margin-top: 1rem;
 }
-.section-text-about h1 {
+.about-section .section-text-about h1 {
   margin: 0;
 }
-
-.big-container {
+.about-section .big-container {
   padding: 0 1rem;
 }
-.big-container .about-container {
+.about-section .big-container .about-container {
   color: white;
   margin: 2rem auto;
 }
-.big-container .about-container .about-text {
+.about-section .big-container .about-container .about-text {
   position: relative;
 }
-.big-container .about-container .about-text p {
+.about-section .big-container .about-container .about-text p {
   font-size: 15px;
   text-align: justify;
   line-height: 2;
 }
-.big-container .about-container .about-text .blinking-cursor {
+.about-section .big-container .about-container .about-text .blinking-cursor {
   display: inline-block;
   width: 2px;
   height: 1em;
@@ -44,20 +46,20 @@
   margin-left: 2px;
   animation: blinkCursor 1s infinite;
 }
-.big-container .photo-container {
+.about-section .big-container .photo-container {
   text-align: center;
   margin: 2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.big-container .photo-container .swiper {
+.about-section .big-container .photo-container .swiper {
   width: 300px;
 }
-.big-container .photo-container .swiper .swiper-wrapper {
+.about-section .big-container .photo-container .swiper .swiper-wrapper {
   align-items: center;
 }
-.big-container .photo-container img {
+.about-section .big-container .photo-container img {
   width: 150px;
   background: white;
   padding: 0.5rem 0.2rem;
@@ -65,23 +67,26 @@
 }
 
 @media screen and (min-width: 768px) {
-  .big-container {
+  .about-section {
+    margin-top: 5.5rem;
+  }
+  .about-section .big-container {
     display: flex;
     padding-bottom: 1rem;
     align-items: center;
     gap: 4rem;
   }
-  .big-container .about-container .about-text p {
+  .about-section .big-container .about-container .about-text p {
     font-size: 21px;
     text-align: justify;
   }
-  .big-container .photo-container .swiper {
+  .about-section .big-container .photo-container .swiper {
     padding: 1rem;
   }
-  .big-container .photo-container .swiper .swiper-wrapper {
+  .about-section .big-container .photo-container .swiper .swiper-wrapper {
     padding: 0 2rem 2rem 2rem;
   }
-  .big-container .photo-container img {
+  .about-section .big-container .photo-container img {
     width: 200px;
   }
 }/*# sourceMappingURL=about.css.map */

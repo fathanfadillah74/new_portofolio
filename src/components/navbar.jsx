@@ -42,13 +42,16 @@ function Navbar() {
     setCookie("theme", newTheme, 365); // Set the cookie for 1 year
   };
 
-  const handleNavItemClick = (index) => {
+  const handleNavItemClick = (index, sectionId, event) => {
+    event.preventDefault();
     setActiveIndex(index);
+    const section = document.getElementById(sectionId);
+    index === 0 ? window.scrollTo({ top: 0, behavior: 'smooth' }) : section.scrollIntoView({ behavior: 'smooth' });
+    setNavVisible(false);
   };
 
   const toggleNav = () => {
     setNavVisible(!isNavVisible);
-    document.getElementsByClassName("section-text-about")[0].style.marginTop = isNavVisible ? "0" : "5rem";
   };
 
   const setCookie = (name, value, days) => {
@@ -70,6 +73,31 @@ function Navbar() {
     }
     return "";
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "skill", "experience", "contact"];
+      let found = false;
+
+      sections.forEach((sectionId, index) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if ((rect.top < window.innerHeight && rect.bottom >= 0)) {
+            window.scrollY == 0 ? setActiveIndex(0) : setActiveIndex(index);
+            found = true;
+          }
+        }
+      });
+
+      // If no section is found in the view, reset active index
+      if (!found) {
+        setActiveIndex(null);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -117,7 +145,7 @@ function Navbar() {
           <li
             key={index}
             className={activeIndex === index ? "is-active" : ""}
-            onClick={() => handleNavItemClick(index)}
+            onClick={(event) => handleNavItemClick(index, item.toLowerCase(), event)} // Pass event here
           >
             <a href={`#${item.toLowerCase()}`}>{item}</a>
           </li>

@@ -21,6 +21,9 @@
   font-size: 16px;
   font-weight: bold;
 }
+.container-experience .vertical-timeline::before {
+  background: #e2e2b6 !important;
+}
 
 @media screen and (min-width: 768px) {
   .container-experience .head-description {
@@ -34,9 +37,6 @@
   .container-experience .head-description .vertical-timeline-element-title {
     font-size: 16px;
     font-weight: bold;
-  }
-  .container-experience .vertical-timeline::before {
-    background: #E2E2B6 !important;
   }
   .container-experience .date-experience {
     color: white;
