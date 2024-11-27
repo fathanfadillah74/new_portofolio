@@ -8,7 +8,7 @@ import "../assets/style/about.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { EffectCards } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectCards } from 'swiper/modules';
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -17,7 +17,6 @@ const About = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth);
-
     };
 
     window.addEventListener("resize", handleResize);
@@ -39,15 +38,15 @@ const About = () => {
         <div className="photo-container">
           {isDesktop >= 768 && (
             <Swiper
-              modules={[EffectCards]}
+              modules={[Autoplay, Pagination, EffectCards]}
               effect={"cards"}
               grabCursor={true}
               autoplay={{
                 delay: 2500,
+                disableOnInteraction: false,
               }}
-              slidesPerView={2}
+              slidesPerView={1}
               spaceBetween={100}
-              navigation={true}
             >
               <SwiperSlide>
                 <img src={fotoProfile} alt="" />
@@ -71,11 +70,12 @@ const About = () => {
           )}
           {isDesktop < 768 && (
             <Swiper
-              modules={[EffectCards]}
+              modules={[Autoplay, Pagination, Navigation, EffectCards]}
               effect={"crative"}
               grabCursor={true}
               autoplay={{
                 delay: 2500,
+                disableOnInteraction: false,
               }}
               slidesPerView={2}
               spaceBetween={100}
