@@ -53,7 +53,7 @@
 .container-skills .list-skill .name-skill .title span {
   font-size: 13px;
 }
-.container-skills .list-skill .explaination {
+.container-skills .list-skill .description {
   font-size: 15px;
   text-align: justify;
 }
@@ -87,7 +87,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 .container-skills .modal-content .modal-header .close-btn {
   background: none;
@@ -106,10 +105,13 @@
 }
 .container-skills .modal-content .modal-body h2 {
   font-size: 24px;
+  margin: 0.5rem 0;
 }
 .container-skills .modal-content .modal-body p {
   font-size: 16px;
   line-height: 1.6;
+  text-align: justify;
+  margin: 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
   .container-skills {

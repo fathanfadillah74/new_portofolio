@@ -1,5 +1,5 @@
 import "../assets/style/skills.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { data } from "../assets/data/dataSkills";
 
@@ -23,6 +23,18 @@ function Skills() {
   const handleCloseModal = () => {
     setSelectedSkill(null);
   };
+
+  useEffect(() => {
+    if (selectedSkill) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedSkill]);
 
   return (
     <>
@@ -56,7 +68,7 @@ function Skills() {
                   {skill.longName && <span> ({skill.longName})</span>}
                 </div>
               </div>
-              <div className="explaination">{skill.description}</div>
+              <div className="description">{skill.description}</div>
             </motion.div>
           ))}
 
@@ -112,7 +124,7 @@ function Skills() {
                         <span> ({selectedSkill.longName})</span>
                       )}{" "}
                     </h2>
-                    <p>{selectedSkill.description}</p>
+                    <p>{selectedSkill.explaination}</p>
                   </div>
                 </motion.div>
               </motion.div>

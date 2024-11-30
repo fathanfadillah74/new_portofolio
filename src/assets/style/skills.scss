@@ -57,7 +57,7 @@
       }
     }
 
-    .explaination {
+    .description {
       font-size: 15px;
       text-align: justify;
     }
@@ -95,7 +95,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1rem;
 
       .close-btn {
         background: none;
@@ -115,11 +114,14 @@
       flex-direction: column;
       h2 {
         font-size: 24px;
+        margin: 0.5rem 0;
       }
 
       p {
         font-size: 16px;
         line-height: 1.6;
+        text-align: justify;
+        margin: 0.5rem 0;
       }
     }
   }

@@ -81,7 +81,7 @@ const About = () => {
                   disableOnInteraction: false,
                 }}
                 slidesPerView={2}
-                spaceBetween={100}
+                spaceBetween={50}
                 navigation={true}
               >
                 <SwiperSlide>

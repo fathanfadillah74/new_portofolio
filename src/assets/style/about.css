@@ -54,7 +54,7 @@
   align-items: center;
 }
 .about-section .big-container .photo-container .swiper {
-  width: 300px;
+  width: 370px;
 }
 .about-section .big-container .photo-container .swiper .swiper-wrapper {
   align-items: center;
@@ -81,6 +81,7 @@
     text-align: justify;
   }
   .about-section .big-container .photo-container .swiper {
+    width: 300px;
     padding: 1rem;
   }
   .about-section .big-container .photo-container .swiper .swiper-wrapper {
