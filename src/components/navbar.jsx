@@ -75,7 +75,7 @@ function Navbar() {
   };
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "skill", "experience", "contact"];
+      const sections = ["about", "skill", "projects", "experience", "contact"];
       let found = false;
       const scrollPosition = window.scrollY + window.innerHeight;
       const pageHeight = document.documentElement.scrollHeight
@@ -147,7 +147,7 @@ function Navbar() {
             </label>
           </div>
         )}
-        {["About", "Skill", "Experience", "Contact"].map((item, index) => (
+        {["About", "Skill", "Projects", "Experience", "Contact"].map((item, index) => (
           <li
             key={index}
             className={activeIndex === index ? "is-active" : ""}
